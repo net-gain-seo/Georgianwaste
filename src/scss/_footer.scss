@@ -1,0 +1,146 @@
+.footer-contact-container {
+    text-align: center;
+    padding: 50px 0;
+    background: $lightGray;
+
+    h2 {
+        color: $primaryColor;
+        font-weight: bold;
+        margin-bottom: 41px;
+    }
+}
+.site-footer {
+  background: $primarybackgroundColor;
+  color: #fff;
+  padding: 20px 0px;
+
+    a {
+        color: #fff;
+
+        &:hover {
+            color: $secondaryLight;
+        }
+    }
+    .copyright-container {
+        background: #fff;
+        color: $primaryColor;
+        padding: 25px;
+    }
+}
+.subfooter {
+  padding-top: 50px;
+  .netgainlogo{
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .contact{
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+}
+
+footer{
+  margin-bottom: -5px;
+  .socialicon{
+      margin-top: 0px;
+      cursor: pointer;
+      &:hover{
+        opacity: 0.7;
+      }
+  }
+  .phone{
+    font-size: 3rem;
+    margin-bottom: 25px;
+  }
+  .address{
+    font-size: 1.6rem;
+    padding-top: 0px;
+  }
+  .contact p{
+      font-weight: 200;
+      font-size: 1rem;
+          color: white;
+  }
+  .copyright{
+      font-weight: 200;
+      font-size: 1rem;
+      span{
+        padding: 0px 20px;
+      }
+      a{
+        font-weight: normal;
+      }
+  }
+  .social{
+    position: relative;
+    float: right;
+    text-align: right;
+    width: 100%;
+    .socialalign{
+      float: right;
+    }
+  }
+}
+@media only screen and (max-width: 1199px) {
+    .f-item {
+        &.hours {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .footer-nav {
+        margin-top: 10px;
+        padding-bottom: 20px;
+        ul {
+            padding: 0;
+            text-align: center;
+
+            li {
+                margin-bottom: 15px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .flex-footer {
+        flex-wrap: wrap;
+        .f-item {
+            flex: 1 0 48%;
+
+            &.contact {
+                margin-top: 10px;
+            }
+            &.hours {
+                padding-left: 5px;
+            }
+        }
+        .copyright {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 546px) {
+    .flex-footer {
+        flex-direction: column;
+
+        .f-item {
+            flex: 1 0 100%;
+            text-align: center;
+
+            &.agents {
+                margin-bottom: 15px;
+            }
+            &.hours {
+                margin-left: 0;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

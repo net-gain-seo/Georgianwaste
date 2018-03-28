@@ -1,0 +1,212 @@
+#closeNav {
+    display: none;
+}
+.main-nav {
+    // Common to all elements
+    z-index: 99999;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400;
+    a {
+        display: block;
+        padding: 7px 15px;
+        background-color: transparent;
+        color: white;
+        transition: all 0.15s ease-in;
+    }
+    a:hover {
+        background-color: $primarybackgroundColor;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+      position: relative;
+      line-height: 1.5;
+      margin-bottom: 0rem;
+        a:hover,
+        &.current_page_item > a {
+            background-color: $primarybackgroundColor;
+            &:hover {
+            background-color: $primarybackgroundColor;
+            }
+        }
+        &.current_page_parent > a{
+            background-color: $primarybackgroundColor;
+        }
+    }
+}
+
+// Level 1 specific
+.main-nav {
+    z-index: 99999;
+    position: relative;
+    margin-right: -15px;
+    > ul {
+        display: flex;
+        justify-content: flex-end;
+        > li {
+            > a {
+                position: relative;
+                text-transform: uppercase;
+                transition: height 0.2s ease-in-out;
+                &:hover {
+                    &::after {
+                        height: 10px;
+                    }
+                }
+            }
+            &:hover {
+                > a {
+                    position: relative;
+                    //margin-left: 1px;
+                    transition: height 0.2s ease-in-out;
+                }
+            }
+        }
+        > li {
+            //margin-left: 1px;
+            &:hover {
+                a {
+            background-color: $primarybackgroundColor;
+                }
+                > ul {
+                    opacity: 1;
+                    left: 0;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+}
+
+// Level 2 specific
+.main-nav {
+    ul ul {
+        position: absolute;
+        left: -9999em;
+        transition: opacity 0.15s ease-in;
+        background-color: #ffffff00;
+        width: 310px;
+        li {
+          color: white;
+          margin: 5px 0px!important;
+            a {
+              transition: background-color 0.2s ease-in-out;
+              background-color: $primarybackgroundColor;
+              background: $primarybackgroundColor;
+              color: white!important;
+              font-size: 2rem;
+              padding: 10px 30px;
+              text-transform: uppercase;
+              text-align: left;
+              line-height: 1.3;
+                &:hover {
+                    transition: background-color 0.2s ease-in-out;
+                    background-image: url('img/NavBackground.jpg');
+                    background-repeat: repeat;
+                    background-size: contain;
+                }
+            }
+            .current-menu-item > a, .current-menu-parent > a{
+              transition: background-color 0.2s ease-in-out;
+              background-image: url('img/NavBackground.jpg');
+              background-repeat: repeat;
+              background-size: contain;
+            }
+        }
+        .current-menu-item > a, .current-menu-parent > a{
+          transition: background-color 0.2s ease-in-out;
+          background-image: url('img/NavBackground.jpg');
+          background-repeat: repeat;
+          background-size: contain;
+        }
+    }
+    #menu-main-menu ul li:hover > ul{
+    position: absolute;
+    left: 300px;
+    top: -10px;
+    padding: 10px 0px 10px 10px;
+    background-color: #ffffff00;
+    li{
+      color: white;
+      margin: 5px 0px!important;
+    }
+    li:hover{
+      transition: background-color 0.2s ease-in-out;
+      background-image: url('img/NavBackground.jpg');
+      background-repeat: repeat;
+      background-size: contain;
+      color: white;
+      a:hover{
+        transition: background-color 0.2s ease-in-out;
+        background-image: url('img/NavBackground.jpg');
+        background-repeat: repeat;
+        background-size: contain;
+        color: white;
+      }
+    }
+    .current_page_item {
+      transition: background-color 0.2s ease-in-out;
+      background-image: url('img/NavBackground.jpg');
+      background-repeat: repeat;
+      background-size: contain;
+    }
+  }
+}
+.sticky-header .main-nav {
+    ul ul {
+        position: absolute;
+        left: -9999em;
+        transition: opacity 0.15s ease-in;
+        background-color: #ffffff00;
+        width: 310px;
+        li {
+          color: white;
+            margin: 5px 0px;
+            a {
+                transition: background-color 0.2s ease-in-out;
+                background-color: $primarybackgroundColor;
+                background: $primarybackgroundColor;
+                color: white!important;
+                font-size: 2rem;
+                padding: 10px 30px;
+                text-transform: uppercase;
+                text-align: left;
+                line-height: 1.3;
+                &:hover {
+                  transition: background-color 0.2s ease-in-out;
+                    background-image: url('img/NavBackground.jpg');
+                    background-repeat: repeat;
+                    background-size: contain;
+                    color: white!important;
+                }
+            }
+        }
+        .current-menu-item > a, .current-menu-parent > a{
+          transition: background-color 0.2s ease-in-out;
+          background-image: url('img/NavBackground.jpg');
+          background-repeat: repeat;
+          background-size: contain;
+        }
+    .current-menu-item > a, .current-menu-parent > a{
+      transition: background-color 0.2s ease-in-out;
+      background-image: url('img/NavBackground.jpg');
+      background-repeat: repeat;
+      background-size: contain;
+    }
+    }
+}
+@media screen and (max-width: 1199px) {
+    .main-nav, .main-nav a, .main-nav ul ul li a {
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .no-scroll {
+        overflow-y: scroll !important;
+    }
+}
