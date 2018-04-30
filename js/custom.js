@@ -1,5 +1,17 @@
 (function($) {
 
+    //Event Tracking
+
+    jQuery(document).on('mailsent.wpcf7', function (e) {
+        $form=jQuery(e.target);
+        
+        if($form.attr('id').search('f77')!=-1){
+            
+            __gaTracker('send','event','Form','Submit','Contact');
+            
+        }
+    });
+
     var stickAt;
     var windowWidth;
     var isSticky = false;
